@@ -1,0 +1,16 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Button, Props } from '../src/Button';
+
+<Meta title="MDX/Button" component={Button} />
+
+const Template: Story<Props> = (args) => <Button {...args} />;
+
+# Button
+
+Let's define a story for our `Button` component:
+
+<Story name="My button" args={{ children: 'I am in MDX' }}>
+  {Template.bind({})}
+</Story>
+
+<ArgsTable story="My Button" />
