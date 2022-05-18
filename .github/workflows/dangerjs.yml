@@ -25,8 +25,8 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 14.x
-      - name: install yarn & yarn add -D danger
-        run: npm install -g yarn && yarn add -D danger
+      - name: yarn add -D danger
+        run: yarn add -D danger
 
       - name: Danger
         run: yarn danger ci
