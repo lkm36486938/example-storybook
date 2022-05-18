@@ -1,0 +1,22 @@
+{
+  "name": "example-storybook",
+  "version": "1.0.0",
+  "description": "스토리북 연습입니다.",
+  "main": "dangerfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkm36486938/example-storybook.git"
+  },
+  "author": "이경민",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lkm36486938/example-storybook/issues"
+  },
+  "homepage": "https://github.com/lkm36486938/example-storybook#readme",
+  "devDependencies": {
+    "danger": "^11.0.6"
+  }
+}
