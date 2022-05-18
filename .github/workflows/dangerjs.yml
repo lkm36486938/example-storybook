@@ -1,0 +1,34 @@
+name: 'Danger JS'
+on:
+  pull_request:
+    types:
+      [
+        assigned,
+        unassigned,
+        labeled,
+        unlabeled,
+        opened,
+        edited,
+        reopened,
+        synchronize,
+        review_requested,
+        review_request_removed,
+      ]
+
+jobs:
+  build:
+    name: Danger JS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.16.1
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.16.1
+      - name: yarn add -D danger
+        run: yarn add -D danger
+
+      - name: Danger
+        run: yarn danger ci
+    env:
+      GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
