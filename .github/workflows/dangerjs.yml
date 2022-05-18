@@ -21,12 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 12.16.1
+      - name: Use Node.js 14.x
         uses: actions/setup-node@master
         with:
-          node-version: 12.16.1
-      - name: yarn add -D danger
-        run: yarn add -D danger
+          node-version: 14.x
+      - name: install yarn & yarn add -D danger
+        run: npm install -g yarn && yarn add -D danger
 
       - name: Danger
         run: yarn danger ci
